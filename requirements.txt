@@ -1,8 +1,7 @@
-streamlit
-pandas
-nltk
-textblob
-matplotlib
-plotly
-wordcloud
-openpyxl
+streamlit==1.36.0
+pandas==2.2.2
+nltk==3.8.1
+wordcloud==1.9.3
+matplotlib==3.9.1
+plotly==5.22.0
+textblob==0.17.1
