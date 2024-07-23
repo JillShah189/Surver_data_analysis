@@ -8,7 +8,7 @@ from wordcloud import WordCloud
 from textblob import TextBlob
 import matplotlib.pyplot as plt
 import plotly.express as px
-
+import logging
 # Load the Excel file
 file_path = 'Feedback_Resposne.xlsx'
 df = pd.read_excel(file_path)
@@ -25,7 +25,6 @@ last_two_questions = questions[-2:]
 
 # Preprocessing function
 lemmatizer = WordNetLemmatizer()
-import logging
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
