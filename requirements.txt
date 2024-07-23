@@ -5,3 +5,4 @@ textblob
 matplotlib
 plotly
 wordcloud
+openpyxl
