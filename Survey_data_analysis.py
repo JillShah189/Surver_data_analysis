@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 # Load the Excel file
-file_path = 'c:/Users/admin/Documents/Feedback_Resposne.xlsx'
+file_path = 'Feedback_Resposne.xlsx'
 df = pd.read_excel(file_path)
 
 # Fill missing values
