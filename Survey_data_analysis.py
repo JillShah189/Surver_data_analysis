@@ -25,7 +25,7 @@ def download_nltk_data():
     except Exception as e:
         logger.error(f"Error downloading NLTK data: {e}")
 
-download_nltk_data()o
+download_nltk_data()
 
 # Load the Excel file
 file_path = 'Feedback_Resposne.xlsx'
