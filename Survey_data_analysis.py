@@ -8,6 +8,24 @@ from wordcloud import WordCloud
 from textblob import TextBlob
 import matplotlib.pyplot as plt
 import plotly.express as px
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+def download_nltk_data():
+    try:
+        nltk.data.find('corpora/stopwords.zip')
+        logger.info("NLTK stopwords data is already downloaded.")
+    except LookupError:
+        logger.info("NLTK stopwords data not found. Downloading...")
+        nltk.download('stopwords')
+        logger.info("NLTK stopwords data downloaded successfully.")
+    except Exception as e:
+        logger.error(f"Error downloading NLTK data: {e}")
+
+download_nltk_data()
 
 # Load the Excel file
 file_path = 'Feedback_Resposne.xlsx'
@@ -26,11 +44,6 @@ last_two_questions = questions[-2:]
 # Preprocessing function
 lemmatizer = WordNetLemmatizer()
 
-def download_nltk_data():
-    nltk_data_dir = '/app/nltk_data'  # Adjust this path as needed
-    nltk.download('stopwords', download_dir=nltk_data_dir)
-
-download_nltk_data()
 #nltk.download('stopwords')
 nltk.download('wordnet')
 
